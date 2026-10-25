@@ -1,0 +1,52 @@
+{
+  "name": "fashion-hub-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fashion Hub - RESTful API (Express + TypeScript + Prisma + MySQL)",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:api": "vitest run tests/api",
+    "prisma:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:reset": "prisma migrate reset --force",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/adapter-mariadb": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.0",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mariadb": "^3.5.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.18.0",
+    "@types/supertest": "^6.0.3",
+    "eslint": "^10.13.0",
+    "prisma": "7.10.1",
+    "supertest": "^7.3.1",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}

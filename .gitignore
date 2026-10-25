@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Prisma Client sinh tự động (tạo lại bằng `npx prisma generate` / npm install)
+backend/src/generated/
+
+# Biến môi trường chứa bí mật — KHÔNG đưa lên GitHub
+.env
+.env.*
+!.env.example
+
+# Logs & coverage
+*.log
+npm-debug.log*
+coverage/
+
+# Hệ điều hành / IDE
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
